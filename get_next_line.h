@@ -6,14 +6,14 @@
 /*   By: aalliot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 12:44:13 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/17 16:08:58 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/18 18:58:06 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 
 # define GET_NEXT_LINE_H
-# define BUFF_SIZE 10
+# define BUFF_SIZE 5
 
 # include "libft.h"
 # include <unistd.h>
