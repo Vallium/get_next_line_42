@@ -6,7 +6,7 @@
 /*   By: aalliot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 12:44:13 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/18 18:58:06 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/21 15:03:19 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # define GET_NEXT_LINE_H
 # define BUFF_SIZE 5
 
-# include "libft.h"
+# include "libft/libft.h"
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
