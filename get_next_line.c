@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 12:43:29 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/23 17:54:06 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/25 10:59:04 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,5 @@ int					get_next_line(int fd, char **line)
 	mem = ft_strsub(str, ft_strchr(str, '\n') - str + 1, \
 			ft_strlen(ft_strchr(str, '\n')));
 	free(str);
-	ft_putnbr(ret);
-	ft_putstr(" Alive ");
 	return (ret == 0 ? 0 : 1);
 }
