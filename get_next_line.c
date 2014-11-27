@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 12:43:29 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/25 14:30:45 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/27 10:19:16 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int					get_next_line(int fd, char **line)
 	static char		*mem;
 	char			*str;
 	char			buff[BUFF_SIZE + 1];
-	int			ret;
+	int				ret;
 
 	if (!line || !*line || !fd || BUFF_SIZE <= 0)
 		return (-1);
