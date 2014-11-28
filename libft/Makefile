@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2014/11/28 12:33:33 by aalliot          ###   ########.fr        #
+#    Updated: 2014/11/28 14:24:00 by aalliot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC		= ft_toupper.c ft_tolower.c ft_strtrim.c ft_strsub.c ft_strstr.c \
 		  ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c \
 		  ft_lstiter.c
 OBJ		= $(SRC:.c=.o)
-HDR		= /includes
+HDR		= includes/
 CC		= gcc
 FLAGS	= -Wall -Wextra -Werror
 
