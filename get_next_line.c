@@ -6,7 +6,7 @@
 /*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 12:43:29 by aalliot           #+#    #+#             */
-/*   Updated: 2014/11/27 20:25:42 by aalliot          ###   ########.fr       */
+/*   Updated: 2014/11/28 10:58:54 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,18 @@
 int					get_next_line(int fd, char **line)
 {
 	static char		*mem;
-	char			buff[BUFF_SIZE];
+	char			buff[BUFF_SIZE + 1];
 	int				ret;
 
-	if (fcntl(fd, F_GETFL) == -1 || BUFF_SIZE <= 0 || !line)
+	ret = 1;
+	if (BUFF_SIZE <= 0 || !line)
 		return (-1);
 	if (!mem)
 		mem = ft_strnew(0);
 	while (!(ft_strchr(mem, '\n')) && (ret = read(fd, buff, BUFF_SIZE)))
 	{
+		if (ret == -1)
+			return (-1);
 		buff[ret] = 0;
 		mem = ft_strjoin(mem, buff);
 	}
