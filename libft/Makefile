@@ -6,7 +6,7 @@
 #    By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:30:22 by aalliot           #+#    #+#              #
-#    Updated: 2014/11/14 15:51:46 by aalliot          ###   ########.fr        #
+#    Updated: 2014/11/28 12:33:33 by aalliot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRC		= ft_toupper.c ft_tolower.c ft_strtrim.c ft_strsub.c ft_strstr.c \
 		  ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c \
 		  ft_lstiter.c
 OBJ		= $(SRC:.c=.o)
+HDR		= /includes
 CC		= gcc
 FLAGS	= -Wall -Wextra -Werror
 
@@ -35,7 +36,7 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 
 %.o: %.c
-	@$(CC) $(FLAGS) -I . -o $@ -c $?
+	@$(CC) $(FLAGS) -I $(HDR) -o $@ -c $?
 
 .PHONY: clean fclean re test1 test2 testall
 
@@ -44,25 +45,5 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-
-other: re $(NAME)
-	@$(CC) -I . $(NAME) main.c
-	@./a.out
-
-testall: test1 test2
-
-test1: re $(NAME)
-	@curl -s http://pastebin.com/raw.php?i=cKeTYAjN > main.c
-	@$(CC) -I . $(NAME) main.c
-	@rm main.c
-	@./a.out
-	@rm a.out
-
-test2: re 
-	@curl -s http://pastebin.com/raw.php?i=ykKyqX78 > main.c
-	@$(CC) $(FLAGS) -I . $(NAME) main.c
-	@rm main.c
-	@./a.out
-	@rm a.out
 
 re: fclean all
